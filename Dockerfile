@@ -8,6 +8,7 @@ ENV UPX_DIR=/tools/upx-4.0.2-amd64_linux
 ENV PATH="$TOOLCHAIN_DIR/bin:$UPX_DIR:$PATH"
 ENV CC=$TOOLCHAIN_DIR/bin/gcc
 
+# https://www.graalvm.org/latest/reference-manual/native-image/guides/build-static-executables/
 RUN microdnf install -y xz \
     # Install upx
     && curl -LJO https://github.com/upx/upx/releases/download/v4.0.2/upx-4.0.2-amd64_linux.tar.xz \
